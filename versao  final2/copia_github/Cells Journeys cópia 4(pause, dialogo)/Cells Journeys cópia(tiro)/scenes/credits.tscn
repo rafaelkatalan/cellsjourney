@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/credits.gd" type="Script" id=1]
+[ext_resource path="res://art/CréditoJogo.jpg" type="Texture" id=2]
+
+[node name="credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 2.0
+margin_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 530.0
+margin_right = 114.0
+margin_bottom = 582.0
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="creditos" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 512, 298.5 )
+scale = Vector2( 0.287479, 0.3015 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 511, 299 )
+current = true
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
