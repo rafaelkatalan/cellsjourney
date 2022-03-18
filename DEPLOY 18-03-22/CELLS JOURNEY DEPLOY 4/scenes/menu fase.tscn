@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/menu fase.gd" type="Script" id=1]
+[ext_resource path="res://art/organs-remove.png" type="Texture" id=2]
+[ext_resource path="res://art/AnyConv.com__hud2.png" type="Texture" id=3]
+[ext_resource path="res://sons/click_2.wav" type="AudioStream" id=4]
+[ext_resource path="res://sons/SOM UTERO.wav" type="AudioStream" id=5]
+
+[node name="menu fase" type="Control"]
+margin_right = 1023.0
+margin_bottom = 601.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pulmão" type="Button" parent="."]
+margin_left = 313.0
+margin_top = 131.0
+margin_right = 403.0
+margin_bottom = 212.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pele" type="Button" parent="."]
+margin_left = 1024.0
+margin_top = 251.0
+margin_right = 1159.0
+margin_bottom = 343.0
+text = "PELE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fígado" type="Button" parent="."]
+margin_left = 1024.0
+margin_top = 142.0
+margin_right = 1167.0
+margin_bottom = 230.0
+text = "FÍGADO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colo de útero" type="Button" parent="."]
+margin_left = 1024.0
+margin_top = 373.0
+margin_right = 1141.0
+margin_bottom = 462.0
+text = "COLO DE ÚTERO"
+
+[node name="instestino" type="Button" parent="."]
+margin_left = 1022.0
+margin_top = 36.0
+margin_right = 1118.0
+margin_bottom = 124.0
+text = "INTESTINO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="Button" parent="."]
+margin_left = 12.0
+margin_top = 552.0
+margin_right = 93.0
+margin_bottom = 589.0
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PxArt" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 513.38, 300.196 )
+scale = Vector2( 1.20333, 1.24248 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 355, 142 )
+scale = Vector2( 1.05077, 1.02386 )
+texture = ExtResource( 2 )
+hframes = 3
+vframes = 3
+frame = 1
+
+[node name="somClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="somFundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="pulmão" to="." method="_on_pulmo_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_Button6_pressed"]
