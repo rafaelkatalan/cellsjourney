@@ -1,0 +1,109 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://art/New Piskel (7).png" type="Texture" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/vilao1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/cenario_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/tenis.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/vilao_2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/pausemenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/dialog.tscn" type="PackedScene" id=8]
+[ext_resource path="res://art/bkgRosanovo.jpg" type="Texture" id=9]
+[ext_resource path="res://scenes/arma.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scripts/mapa_1.gd" type="Script" id=11]
+[ext_resource path="res://scenes/voltarMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://sons/musica background.wav" type="AudioStream" id=13]
+[ext_resource path="res://scenes/Bala.tscn" type="PackedScene" id=14]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "New Piskel (7).png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 12, 12 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = true
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="mapa_1" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="cenario_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 294 )
+
+[node name="Plataforma" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 12, 12 )
+format = 1
+tile_data = PoolIntArray( 1835068, 0, 0, 1835069, 0, 0, 1835070, 0, 0, 1835071, 0, 0, 1835072, 0, 0, 1835073, 0, 0, 1835074, 0, 0, 1835075, 0, 0, 1835076, 0, 0, 1900628, 0, 0, 1900629, 0, 0, 1900630, 0, 0, 1900631, 0, 0, 1900632, 0, 0, 1900633, 0, 0, 1900634, 0, 0, 1900635, 0, 0, 1900636, 0, 0, 1900637, 0, 0, 1900638, 0, 0, 1900639, 0, 0, 1900640, 0, 0, 1900641, 0, 0, 1900642, 0, 0, 1900643, 0, 0, 2031732, 0, 0, 2031733, 0, 0, 2031734, 0, 0, 2031735, 0, 0, 2031736, 0, 0, 2031737, 0, 0, 2031738, 0, 0, 2031739, 0, 0, 2031740, 0, 0, 2031741, 0, 0, 2031742, 0, 0, 2162760, 0, 0, 2162761, 0, 0, 2162762, 0, 0, 2162763, 0, 0, 2162764, 0, 0, 2162765, 0, 0, 2162766, 0, 0, 2162767, 0, 0, 2162768, 0, 0, 2162769, 0, 0, 2162770, 0, 0, 2556014, 0, 0, 2556015, 0, 0, 2556016, 0, 0, 2556017, 0, 0, 2556018, 0, 0, 2556019, 0, 0, 2556020, 0, 0, 2556021, 0, 0, 2556022, 0, 0, 2556023, 0, 0, 2556024, 0, 0, 2556025, 0, 0, 3670160, 0, 0, 3670161, 0, 0, 3670162, 0, 0, 3670163, 0, 0, 3670164, 0, 0, 3670165, 0, 0, 3670166, 0, 0, 3670167, 0, 0, 3670168, 0, 0, 4325523, 0, 0, 4325524, 0, 0, 4325525, 0, 0, 4325526, 0, 0, 4325527, 0, 0, 4325528, 0, 0, 4325529, 0, 0, 4325530, 0, 0, 4325531, 0, 0, 4325532, 0, 0, 4325533, 0, 0, 4325534, 0, 0, 4325535, 0, 0, 4325536, 0, 0, 4325537, 0, 0, 4653223, 0, 0, 4653224, 0, 0, 4653225, 0, 0, 4653226, 0, 0, 4653227, 0, 0, 4653228, 0, 0, 4653229, 0, 0, 4653230, 0, 0, 4653231, 0, 0, 4653232, 0, 0, 4653233, 0, 0, 5046428, 0, 0, 5046429, 0, 0, 5046430, 0, 0, 5046431, 0, 0, 5046432, 0, 0, 5046433, 0, 0, 5046434, 0, 0, 5046435, 0, 0, 5046436, 0, 0, 5046437, 0, 0, 5046438, 0, 0, 5046439, 0, 0, 5046440, 0, 0, 5308589, 0, 0, 5308590, 0, 0, 5308591, 0, 0, 5308592, 0, 0, 5308593, 0, 0, 5308594, 0, 0, 5308595, 0, 0, 5308596, 0, 0, 5308597, 0, 0, 5308598, 0, 0, 5308599, 0, 0, 5308600, 0, 0, 5308601, 0, 0, 5570707, 0, 0, 5570708, 0, 0, 5570709, 0, 0, 5570710, 0, 0, 5570711, 0, 0, 5570712, 0, 0, 5570713, 0, 0, 5570714, 0, 0, 5570715, 0, 0, 5570716, 0, 0, 5570717, 0, 0, 5570718, 0, 0, 5570719, 0, 0, 5570720, 0, 0, 5570721, 0, 0, 5832837, 0, 0, 5832838, 0, 0, 5832839, 0, 0, 5832840, 0, 0, 5832841, 0, 0, 5832842, 0, 0, 5832843, 0, 0, 5832844, 0, 0, 5832845, 0, 0, 5832846, 0, 0, 5832847, 0, 0, 7077938, 0, 0 )
+
+[node name="Personagem" parent="." instance=ExtResource( 2 )]
+position = Vector2( 165, -459 )
+
+[node name="vilao1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 829, 502 )
+
+[node name="vilao_2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1776, 1178 )
+
+[node name="vilao_3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1451, 1108 )
+
+[node name="vilao_4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2075, 1062 )
+
+[node name="vilao_5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1839, 1004 )
+
+[node name="Tenis" parent="." instance=ExtResource( 5 )]
+position = Vector2( 712, 505 )
+
+[node name="pausemenu" parent="." instance=ExtResource( 7 )]
+
+[node name="Roger" parent="." instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 448.0
+margin_top = -95.0
+margin_right = 494.0
+margin_bottom = -47.0
+
+[node name="Fundo" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.517647, 0.145098, 0.145098, 1 )
+show_behind_parent = true
+position = Vector2( 733, -85 )
+scale = Vector2( 2.7076, 7.31057 )
+texture = ExtResource( 9 )
+
+[node name="arma" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1174, -136 )
+
+[node name="VoltaMenu" parent="." instance=ExtResource( 12 )]
+position = Vector2( -635, -292 )
+
+[node name="somFundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Bala" parent="." instance=ExtResource( 14 )]
+
+[connection signal="body_entered" from="Tenis" to="Personagem" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Tenis" to="Tenis" method="_on_Tenis_body_entered"]
+[connection signal="body_entered" from="arma" to="Personagem" method="_on_arma_body_entered"]
+[connection signal="body_entered" from="VoltaMenu" to="Personagem" method="_on_VoltaMenu_body_entered"]
